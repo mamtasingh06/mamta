@@ -2,7 +2,7 @@
 
 try{
     $conn = new PDO("mysql:host=localhost; dbname=employee_db;", "root", "");
-    echo "Connected";
+   
     // insert data
     if(isset($_REQUEST['submit']))
     {
@@ -47,17 +47,18 @@ echo "Connection failed" .$e->getMessage();
 
     <!-- Font Awesome -->
 
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.6.0/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.0/font/bootstrap-icons.css">
     <!-- Bootstrap CSS-->
 
     <link rel="stylesheet" href="css/bootstrap.min.css">    
     <!-- Custom CSS -->
    
-    <title>Village</title>
+    <title>Test</title>
     <style>
       *{
     margin: 0px;
     padding: 0px;
+    box-sizing:border-box;
 } 
         .text{
           min-height:100vh;
@@ -155,17 +156,26 @@ position:relative;
 background-size:cover;
 position:relative;
       }
+     .bi{
+       font-size:20px;
+     }
+     .maindiv{
+       width:100%;
+     }
+       width:100%;
+     }
       @media  screen and (max-width:1020px) {
         .text-box > h1 {
           font-size: 40px;
         }
+        
       }
     </style>
 </head>
 
 
-<>
-  <header class="bg-secondary ">
+<nav class="navbar navbar-expand-lg navbar-light bg-dark fixed-top" id="nav1">
+  <header class="bg-secondary header fixed-top">
     <ul class="nav justify-content-end ">
       <li class="nav-item ">
         <a class="nav-link active text-white" href="#">(213)894-9933 |</a>
@@ -176,15 +186,13 @@ position:relative;
       
     </ul>
   </header>
-
-  <nav class="navbar navbar-expand-md navbar-light bg-dark ">
-    <div class="container-fluid">
+    <div class="container-fluid nav mt-5">
       
       <a class="navbar-brand text-white" href="#index.html">
         <img class="ms-5" src="images/spinx-logo.png" alt="logo" style="width: 150px; height: 60px;">
       </a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
+      <button class="navbar-toggler " type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon text-white"></span>
       </button>
       
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
@@ -218,9 +226,11 @@ position:relative;
       </div>
     </div>
   </nav>
+ 
+ 
   <div class="container-fluid text">
    <div class="text-box">
-     <h1>
+     <h1 id="big">
      <b> BIG IDEAS,<br>
       CREATIVE PEOPLE,<br>
       NEW TECHNOLOGY.</b>
@@ -620,6 +630,7 @@ position:relative;
           <label for="inputTextarea" class="my-2 sb-scroll text-white ">Message *</label>
           <textarea class="form-control bg-secondary" id="inputTextarea" name="message" required></textarea>
        </div>
+       
       </div>
        <div class=" form-group col-lg-6 mb-3 ">
         <input class="form-check-input me-1 " type="checkbox" value="" aria-label="...">
@@ -627,18 +638,46 @@ position:relative;
           No spam, we promise.</span>
 
           <button class="btn btn-primary btn-lg ms-5 mt-5" name="submit" type="submit">Submit</button>
-    
-      </div>
+          
        
       
       </form>
+      
       </div>
       
       </div>
+      <div class="container-fluid">
+        <div class="row ">
+        <div class="col-lg-6  offset-10">
+        
+        <a href="index.php"> <i class="bi bi-arrow-up bi-2x" style="font-size:30px; background:yellowgreen;
+        color:white"></i></a>
+        
+          </div>
+          <div class="col-lg-6  offset-9 mt-3">
+          <ul class="list-unstyled list-inline ">
+          <li class="list-inline-item "><i class="bi bi-linkedin"></i></li>
+          <li class="list-inline-item ms-5"><i class="bi bi-twitter"></i></li>
+          <li class="list-inline-item ms-5"><i class="bi bi-facebook"></i></li>
+          
+        </ul>
+          </div>
+        </div>
+        
+        </div>
+      <footer class="ms-5 mb-5 text-center">
+        &copy; 2021 SPINX Digital All Rights Reserved | Privacy Policy | Sitemap
+        
+      
+      </footer>
+      
       </div>
       
+      </div>
+     
 <script src="js/bootstrap.min.js"></script>
 <script src="js/jquery.js"></script>
 <script src="js/popper.js"></script>
+<script src="js/custom.js"></script>
 </body>
 </html>
